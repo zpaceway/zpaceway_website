@@ -1,0 +1,173 @@
+@import "./variables";
+
+.wrapper {
+  max-width: $internal-max-width;
+  padding: $external-padding;
+  margin: auto;
+  margin-top: 80px;
+}
+
+.main {
+  @extend .wrapper;
+  section {
+    margin-bottom: max(80px, 30vh);
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .banner {
+    display: flex;
+    & > * {
+      flex-basis: 100%;
+    }
+    .introduction {
+      width: min(100%, 600px);
+      height: 0;
+      padding-bottom: min(75.1%, 450px);
+      position: relative;
+      background-color: $seconday-color;
+      margin-top: 40px;
+      iframe {
+        @keyframes rotation {
+          from {
+            transform: rotate(-6deg);
+          }
+          to {
+            transform: rotate(6deg);
+          }
+        }
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: none;
+        animation-name: rotation;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+      }
+    }
+    .buttons {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      gap: 8px;
+    }
+  }
+  .presentation {
+    display: flex;
+    justify-content: space-around;
+    gap: 120px;
+    @media screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+      gap: max(80px, 30vh);
+    }
+    & > * {
+      flex-basis: 100%;
+    }
+    .brief {
+      .profilePicture {
+        display: flex;
+        justify-content: center;
+        color: $primary-color;
+        align-items: flex-end;
+        width: 160px;
+        height: 160px;
+        margin: 0 12px 0 0;
+        float: left;
+        vertical-align: top;
+        border-radius: 4px;
+        background-image: url("../../public/profilePicture.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        font-family: "Anton", sans-serif;
+        filter: brightness(80%) contrast(104%) saturate(20%) brightness(120%);
+      }
+    }
+  }
+  .technologies {
+    .stack {
+      margin-top: 20px;
+      & > div:first-child {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .loadmore {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+    }
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 60px;
+    & > * {
+      flex-basis: 100%;
+      .description {
+        text-align: left;
+      }
+      .companies {
+        margin-top: 60px;
+        max-width: 320px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 80px);
+        grid-gap: 20px;
+        justify-content: space-between;
+        & > div {
+          box-shadow: 0 0 2px $black-color;
+          border-radius: 80px;
+          min-width: 80px;
+          max-width: 80px;
+          min-height: 80px;
+          max-height: 80px;
+          width: 80px;
+          height: 80px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
+  }
+  .contact {
+    @media screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+    }
+    display: flex;
+    & > * {
+      flex-basis: 100%;
+    }
+    justify-content: center;
+    align-self: center;
+    gap: 40px;
+    .platforms {
+      margin-top: 40px;
+      display: grid;
+      place-items: center;
+      place-content: center;
+      grid-template-columns: 100px 100px 100px;
+      grid-template-rows: 100px 100px 100px;
+      & > * {
+        width: 92px;
+        height: 92px;
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        text-align: center;
+        &:hover {
+          transform: scale(1.05);
+        }
+        i {
+          font-size: 48px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
