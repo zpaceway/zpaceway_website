@@ -175,7 +175,7 @@ function Home() {
             scrollStatus.scrollPosBefore = window.scrollY;
           });
         };
-      }, 1000);
+      }, 1500);
     };
     handler();
   }, []);
