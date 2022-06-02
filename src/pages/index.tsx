@@ -23,6 +23,10 @@ const technologiesStack = [
   "Python",
   "Django",
   "Django REST framework",
+  "Golang",
+  "Gin Gonic",
+  "Rust",
+  "WebAssembly",
   "Celery",
   "RabbitMQ",
   "JWT",
@@ -220,7 +224,7 @@ function Home() {
                   })
                 }
               >
-                I want to contact you! 🫵🏻
+                I want to contact you! 💻
               </Button>
             </div>
             {isJustVisitor && (
