@@ -6,7 +6,7 @@ function Button({
   children,
   onClick,
 }: {
-  color?: string;
+  color?: "primary" | "secondary";
   children: React.ReactNode;
   onClick?: (...args: any) => any;
 }) {

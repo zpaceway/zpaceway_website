@@ -44,6 +44,7 @@ function Navbar({ isNavbarHidden }: { isNavbarHidden: boolean }) {
             src={`https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1&mute=0`}
           ></iframe>
           <Button
+            color="primary"
             onClick={() => {
               setIsIframeHidden((_state) => !_state);
             }}
